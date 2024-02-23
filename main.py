@@ -24,10 +24,10 @@ def main(page: ft.Page):
                                     icon=ft.icons.SETTINGS, text='Classify'
                                 )
                             ],
-                            width=1100, spacing=25
+                            expand=True, spacing=25
                         )
                     ]),
-                    padding=50
+                    padding=70
         
         )
         
