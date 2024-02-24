@@ -9,6 +9,10 @@ class ClassifyPage(ft.UserControl):
                     min_lines=1,
                     max_lines=15,
                 )
+        self.prediction = ft.Text(
+                            size=30,
+                            weight=ft.FontWeight.BOLD,
+                        )
         return ft.Container(
             content=ft.Row([
                         ft.Column(
@@ -23,7 +27,8 @@ class ClassifyPage(ft.UserControl):
                                     icon=ft.icons.SETTINGS, 
                                     text='Classify',
                                     on_click=self.show_classification
-                                )
+                                ),
+                                self.prediction
                             ],
                             expand=True, spacing=25
                         )
@@ -34,4 +39,6 @@ class ClassifyPage(ft.UserControl):
     
     def show_classification(self, e):
         msg = self.msg_box.value
-        print(classify_msg(msg))
+        prediction = classify_msg(msg)
+        self.prediction.value = prediction
+        self.update()
