@@ -1,4 +1,5 @@
 import flet as ft
+from classify import classify_msg
 
 class ClassifyPage(ft.UserControl):
     def build(self):
@@ -21,7 +22,7 @@ class ClassifyPage(ft.UserControl):
                                 ft.FloatingActionButton(
                                     icon=ft.icons.SETTINGS, 
                                     text='Classify',
-                                    on_click=self.classify
+                                    on_click=self.show_classification
                                 )
                             ],
                             expand=True, spacing=25
@@ -31,6 +32,6 @@ class ClassifyPage(ft.UserControl):
         
         )
     
-    def classify(self, e):
+    def show_classification(self, e):
         msg = self.msg_box.value
-        print(msg)
+        print(classify_msg(msg))
