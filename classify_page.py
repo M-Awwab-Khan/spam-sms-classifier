@@ -38,9 +38,13 @@ class ClassifyPage(ft.UserControl):
         )
     
     def show_classification(self, e):
-        msg = self.msg_box.value
-        prediction = classify_msg(msg)
-        color = ft.colors.RED if prediction == 'Spam' else ft.colors.GREEN
-        self.prediction.value = prediction
-        self.prediction.color = color
+        msg = self.msg_box.value.strip()
+        if msg:
+            prediction = classify_msg(msg)
+            color = ft.colors.RED if prediction == 'Spam' else ft.colors.GREEN
+            self.prediction.value = prediction
+            self.prediction.color = color
+        else:
+            self.prediction.color = ft.colors.BLACK
+            self.prediction.value = 'Please enter in search field to continue'
         self.update()
