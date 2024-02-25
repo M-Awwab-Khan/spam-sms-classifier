@@ -9,3 +9,6 @@ The machine learning model is integrated into a desktop application built using 
 
 ## Demo
 [spam-classifier.webm](https://github.com/M-Awwab-Khan/spam-sms-classifier/assets/63666608/8d602961-2180-4c85-872b-066b5308936d)
+
+## Thanks
+Thanks for watching the demo. If you liked my idea, be sure to give it a star and follow me for more interesting projects. If you have any suggestions, you can contact me via gmail mawwabkhank2006@gmail.com
